@@ -123,14 +123,12 @@ builder.Services.AddSwaggerExamplesFromAssemblies(Assembly.GetEntryAssembly());
 var app = builder.Build();
 
 
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Colegio API V1");
     });
-}
 
 app.UseHttpsRedirection();
 
